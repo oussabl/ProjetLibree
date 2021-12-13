@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Projet Libre</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="Login">Login</string>
+    <string name="firstname">Firstname</string>
+    <string name="lastname">Lastname</string>
+    <string name="cpassword">Confirme password</string>
+    <string name="singin">SING IN</string>
+    <string name="forgotpassword">FORGOT PASSWORD</string>
+    <string name="id">ID</string>
+    <string name="date_arrive">Date arrive</string>
+    <string name="date_depart">Date depart</string>
+    <string name="telephone">Telephone</string>
+    <string name="delete">Delete</string>
+    <string name="register">Register</string>
+    <string name="add_user">Add User</string>
+    <string name="datefin">Date fin</string>
+    <string name="updateuser">Update User</string>
+    <string name="update_user">Update</string>
+
+</resources>

@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileEmployer">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    tools:ignore="MissingConstraints">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/blue_bg">
+
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/logo" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/usernameEmployer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal"
+                    android:text="USER List"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/purple_500"
+                    android:textSize="29dp"
+                    android:textStyle="normal|bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:id="@+id/idft"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@drawable/blue_border_rounded_cornwe"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="@string/firstname"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingLeft="17dp"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:textCursorDrawable="@drawable/cursor_color"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="MissingConstraints,DuplicateClickableBoundsCheck,DuplicateClickableBoundsCheck" />
+
+                        <EditText
+                            android:id="@+id/idlt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@drawable/blue_border_rounded_cornwe"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="@string/lastname"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingLeft="17dp"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:textCursorDrawable="@drawable/cursor_color"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/idft"
+                            tools:ignore="MissingConstraints" />
+
+                        <EditText
+                            android:id="@+id/idem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@drawable/blue_border_rounded_cornwe"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="@string/email"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingLeft="17dp"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:textCursorDrawable="@drawable/cursor_color"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/idlt"
+                            tools:ignore="MissingConstraints" />
+
+                        <EditText
+                            android:id="@+id/idtl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@drawable/blue_border_rounded_cornwe"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="@string/telephone"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingLeft="17dp"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:textCursorDrawable="@drawable/cursor_color"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/idem"
+                            tools:ignore="MissingConstraints" />
+
+                        <EditText
+                            android:id="@+id/idms"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@drawable/blue_border_rounded_cornwe"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="mission"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingLeft="17dp"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:textCursorDrawable="@drawable/cursor_color"
+                            android:textSize="12sp"
+
+                            app:layout_constraintTop_toBottomOf="@+id/idtl"
+                            tools:ignore="MissingConstraints" />
+
+                        <EditText
+                            android:id="@+id/idpw"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@drawable/blue_border_rounded_cornwe"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="@string/password"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingLeft="17dp"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:textCursorDrawable="@drawable/cursor_color"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/idms"
+                            tools:ignore="MissingConstraints" />
+
+                        <EditText
+                            android:id="@+id/iddp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/blue_border_rounded_cornwe"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="@string/date_depart"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingLeft="17dp"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:textCursorDrawable="@drawable/cursor_color"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/idpw"
+                            tools:ignore="MissingConstraints" />
+
+
+                        <EditText
+                            android:id="@+id/iddf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/blue_border_rounded_cornwe"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="Date final"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingLeft="17dp"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:textCursorDrawable="@drawable/cursor_color"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/iddp"
+                            tools:ignore="MissingConstraints" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="20dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/iddf"
+                            tools:ignore="MissingConstraints">
+
+
+                            <Button
+                                android:id="@+id/btn_pdf"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/blue_fill__rounded_color"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="pdf"
+                                android:onClick="UploadPDF"
+                                android:textColor="#ffffff"
+                                android:textSize="12sp"
+                                tools:ignore="MissingConstraints" />
+
+                            <Button
+                                android:id="@+id/btn_update"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/blue_fill__rounded_color"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:text="upload"
+                                android:onClick="UploadDonnee"
+                                android:textColor="#ffffff"
+                                android:textSize="12sp"
+                                tools:ignore="InvalidId" />
+
+                            <Button
+                                android:id="@+id/btn_envoye"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/blue_fill__rounded_color"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:text="Envoyer"
+                                android:onClick="SendMail"
+                                android:textColor="#ffffff"
+                                android:textSize="12sp"
+                                tools:ignore="InvalidId" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="20dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayoutMenu"
+                            tools:ignore="MissingConstraints">
+
+
+                            <Button
+                                android:id="@+id/btn_back"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/blue_fill__rounded_color"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:text="Back"
+                                android:onClick="OnBack"
+                                android:textColor="#ffffff"
+                                android:textSize="12sp"
+                                tools:ignore="InvalidId" />
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="50dp"
+            android:layout_paddingLeft="35dp"
+            android:layout_weight="-7"
+            android:fontFamily="@font/poppins_medium"
+            android:text="SING IN "
+            android:textColor="#1566e0"
+            android:textSize="10.5sp" />
+
+
+
+
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:paddingLeft="17dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/lastname"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="@string/email"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="17dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSize="12sp"
+            tools:ignore="MissingConstraints" />
+
+
+        <EditText
+            android:id="@+id/firstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:paddingLeft="17dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/email"
+            tools:ignore="MissingConstraints" />
+
+    -->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "740371627071",
+    "project_id": "projet-libre-e869d",
+    "storage_bucket": "projet-libre-e869d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740371627071:android:500c4c0e42f6a3d3b38c8a",
+        "android_client_info": {
+          "package_name": "com.example.projetlibre"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740371627071-l3q4fpjgc187rgbbhg74ah5ck20dvo06.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSk5PPBwa-DKeJRCw9EKuZYNn9LcYNJrs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740371627071-l3q4fpjgc187rgbbhg74ah5ck20dvo06.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
