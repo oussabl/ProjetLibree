@@ -17,6 +17,9 @@ public class Reserve_Conge extends AppCompatActivity {
     AlertDialog  alertDialog;
     int key_date =0;
     TextView date_con_depp,date_con_finn;
+    DAOConge daoconge;
+    Conge conge;
+    String KEY,nom,prenom,mission,email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,11 +30,11 @@ public class Reserve_Conge extends AppCompatActivity {
 
         Bundle bundle = new Bundle();
         bundle = getIntent().getExtras();
-        String KEY = bundle.getString("key");
-        String nom = bundle.getString("firstname");
-        String prenom = bundle.getString("lastname");
-        String mission = bundle.getString("mission");
-        String email = bundle.getString("email");
+         KEY = bundle.getString("key");
+         nom = bundle.getString("firstname");
+         prenom = bundle.getString("lastname");
+         mission = bundle.getString("mission");
+         email = bundle.getString("email");
 
     }
     @SuppressLint("SetTextI18n")
@@ -47,10 +50,11 @@ public class Reserve_Conge extends AppCompatActivity {
                 System.out.println("year" + month);
                 System.out.println("year" + dayOfMonth);
                 if (key_date == 0) {
-                    date_con_finn.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
+                    
+                    date_con_depp.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
                     key_date++;
                 } else if (key_date == 1) {
-                    date_con_depp.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
+                    date_con_finn.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
                     key_date--;
                 }
             }
@@ -72,4 +76,17 @@ public class Reserve_Conge extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), ProfileEmployer.class);
         startActivity(intent);
     }
+    public void AjouterConge(){
+         daoconge = new DAOConge();
+        String date_dep = (String)date_con_depp.getText();
+        String date_fin = (String)date_con_finn.getText();
+        Conge conge = new Conge(KEY,prenom,nom,date_dep,date_fin);
+        //Toast.makeText(this, "Voila Votre conge"+conge.toString(), Toast.LENGTH_SHORT).show();
+        daoconge.add(conge);
+    }
+
+    public void Validation(View view) {
+        AjouterConge();
+    }
+
 }

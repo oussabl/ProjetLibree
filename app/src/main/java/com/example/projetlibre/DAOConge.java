@@ -7,16 +7,16 @@ import com.google.firebase.database.Query;
 
 import java.util.HashMap;
 
-public class DAOEmloyee {
+public class DAOConge {
     private DatabaseReference databaseReference;
-    public DAOEmloyee(){
+    public DAOConge(){
         FirebaseDatabase db = FirebaseDatabase.getInstance();
 
-        databaseReference= db.getReference(Employer.class.getSimpleName());
+        databaseReference= db.getReference(Conge.class.getSimpleName());
     }
 
-    public Task<Void> add(Employer emp){
-        return databaseReference.push().setValue(emp);
+    public Task<Void> add(Conge conge){
+        return databaseReference.push().setValue(conge);
     }
     public Task<Void> update(String key , HashMap<String , Object> hashMap){
         return databaseReference.child(key).updateChildren(hashMap);

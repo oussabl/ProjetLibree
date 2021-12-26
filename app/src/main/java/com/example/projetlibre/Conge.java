@@ -8,6 +8,14 @@ public class Conge {
     private String date_fin_conge;
     private final int TOTALCONGE=18;
 
+    public Conge(String KEY, String firstname, String lastname, String date_depart_conge, String date_fin_conge) {
+        this.KEY = KEY;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.date_depart_conge = date_depart_conge;
+        this.date_fin_conge = date_fin_conge;
+    }
+
     public String getFirstname() {
         return firstname;
     }
@@ -38,6 +46,17 @@ public class Conge {
 
     public void setDate_depart_conge(String date_depart_conge) {
         this.date_depart_conge = date_depart_conge;
+    }
+
+    @Override
+    public String toString() {
+        return "Conge{" +
+                "KEY='" + KEY + '\'' +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", date_depart_conge='" + date_depart_conge + '\'' +
+                ", date_fin_conge='" + date_fin_conge + '\'' +
+                '}';
     }
 
     public String getDate_fin_conge() {

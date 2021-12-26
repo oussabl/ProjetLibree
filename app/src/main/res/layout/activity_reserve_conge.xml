@@ -163,13 +163,26 @@
                     android:id="@+id/date_con_dep"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:layout_marginRight="10dp"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="10sp"
+                    android:text="Date Depart" />
 
                 <TextView
                     android:id="@+id/date_con_fin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:layout_marginRight="10dp"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="10sp"
+                    android:text="Date Fin" />
+
+                <Button
+                    android:id="@+id/Validation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="Validation"
+                    android:text="Button" />
             </LinearLayout>
 
             <TextView
