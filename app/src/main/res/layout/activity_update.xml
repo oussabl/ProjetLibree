@@ -186,6 +186,7 @@
                         android.support.design:layout_constraintStart_toStartOf="parent"
                         android.support.design:layout_constraintTop_toBottomOf="@+id/idms"
                         tools:ignore="MissingConstraints" />
+
                     <EditText
                         android:id="@+id/cpassword"
                         android:layout_width="match_parent"
@@ -206,59 +207,109 @@
                         android.support.design:layout_constraintHorizontal_bias="0.0"
                         android.support.design:layout_constraintTop_toBottomOf="@+id/idpw"
                         tools:ignore="MissingConstraints" />
+
                     <LinearLayout
                         android:id="@+id/linearLayout2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
-                        android:layout_marginBottom="10dp"
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android.support.design:layout_constraintBottom_toTopOf="@+id/linearLayout"
                         android.support.design:layout_constraintEnd_toEndOf="parent"
                         android.support.design:layout_constraintStart_toStartOf="parent"
                         android.support.design:layout_constraintTop_toBottomOf="@+id/cpassword"
                         tools:ignore="MissingConstraints">
 
-                        <EditText
-                            android:id="@+id/iddp"
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginRight="8dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/blue_border_rounded_cornwe"
-                            android:fontFamily="@font/poppins_regular"
-                            android:hint="@string/date_depart"
-                            android:inputType="text"
-                            android:maxLines="1"
-                            android:paddingLeft="17dp"
-                            android:paddingTop="15dp"
-                            android:paddingBottom="15dp"
-                            android:textCursorDrawable="@drawable/cursor_color"
-                            android:textSize="12sp"
-                            android.support.design:layout_constraintTop_toBottomOf="@+id/cpassword"
-                            tools:ignore="MissingConstraints" />
+                            android:layout_height="match_parent">
 
-                        <EditText
-                            android:id="@+id/id_datefin"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/blue_border_rounded_cornwe"
-                            android:fontFamily="@font/poppins_regular"
-                            android:hint="@string/datefin"
-                            android:inputType="text"
-                            android:maxLines="1"
-                            android:paddingLeft="17dp"
-                            android:paddingTop="15dp"
-                            android:paddingBottom="15dp"
-                            android:textCursorDrawable="@drawable/cursor_color"
-                            android:textSize="12sp"
-                            android.support.design:layout_constraintTop_toBottomOf="@+id/cpassword"
-                            tools:ignore="MissingConstraints" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical"
+                                android.support.design:layout_constraintTop_toTopOf="parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center">
+
+                                        <ImageView
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:layout_marginTop="1dp"
+                                            android:foregroundGravity="center"
+                                            android:onClick="Calclick"
+                                            android:padding="2dp"
+                                            android:src="@drawable/cal"
+                                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                                        <EditText
+                                            android:id="@+id/iddp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/blue_border_rounded_cornwe"
+                                            android:enabled="false"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:hint="@string/date_depart"
+                                            android:inputType="text"
+                                            android:maxLines="1"
+                                            android:paddingLeft="17dp"
+                                            android:paddingTop="11dp"
+                                            android:paddingBottom="11dp"
+                                            android:textCursorDrawable="@drawable/cursor_color"
+                                            android:textSize="12sp"
+                                            tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center">
+
+                                        <ImageView
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:layout_marginTop="1dp"
+                                            android:foregroundGravity="center"
+                                            android:onClick="Calclick"
+                                            android:padding="2dp"
+                                            android:src="@drawable/cal"
+                                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                                        <EditText
+                                            android:id="@+id/id_datefin"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/blue_border_rounded_cornwe"
+                                            android:enabled="false"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:hint="@string/date_arrive"
+                                            android:inputType="text"
+                                            android:maxLines="1"
+                                            android:paddingLeft="17dp"
+                                            android:paddingTop="11dp"
+                                            android:paddingBottom="11dp"
+                                            android:textCursorDrawable="@drawable/cursor_color"
+                                            android:textSize="12sp"
+                                            tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
                     </LinearLayout>

@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/oussa/.gradle/caches/transforms-3/be5f57a8da44af27e3b79434a1fa46b5/transformed/appcompat-1.4.0/res/drawable/abc_ic_ab_back_material.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/activity_main.xml" value="0.1814814814814815" />
+        <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/activity_profile_employer.xml" value="0.22" />
+        <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/activity_register.xml" value="0.1814814814814815" />
+        <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/activity_update.xml" value="0.22" />
+        <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/activity_userlist.xml" value="0.25" />
+        <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/item.xml" value="0.1814814814814815" />
+        <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/popcal.xml" value="0.1814814814814815" />
         <entry key="..\:/Users/oussa/AndroidStudioProjects/pp/app/src/main/res/drawable-v24/blue_border_rounded_cornwe.xml" value="0.1" />
         <entry key="..\:/Users/oussa/AndroidStudioProjects/pp/app/src/main/res/drawable-v24/blue_fill__rounded_color.xml" value="0.2203125" />
         <entry key="..\:/Users/oussa/AndroidStudioProjects/pp/app/src/main/res/drawable-v24/cursor_color.xml" value="0.2203125" />

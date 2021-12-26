@@ -179,7 +179,9 @@ public class Register extends AppCompatActivity{
         alertDialog=builder.create();
         alertDialog.show();
     }
-/*
+
+
+    /*
     @SuppressLint("SetTextI18n")
     public void Calclick1(View view) {
         AlertDialog.Builder builder1 = new AlertDialog.Builder(this);

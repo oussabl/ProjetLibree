@@ -73,4 +73,10 @@ public class List extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), Home.class);
         startActivity(intent);
 }
+
+    public void onbackk(View view) {
+        back = findViewById(R.id.btn_back);
+        Intent intent = new Intent(getApplicationContext(), Home.class);
+        startActivity(intent);
+    }
 }

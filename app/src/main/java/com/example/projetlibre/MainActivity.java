@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
                     intent_Chercher.putExtra("tel", emp.getTelephone());
                     intent_Chercher.putExtra("mission", emp.getMission());
                     intent_Chercher.putExtra("date_dep", emp.getDate_depart());
+                    intent_Chercher.putExtra("date_fin", emp.getDate_fin());
                     intent_Chercher.putExtra("email", emp.getEmail());
                     intent_Chercher.putExtra("password", emp.getPassword());
                     startActivity(intent_Chercher);

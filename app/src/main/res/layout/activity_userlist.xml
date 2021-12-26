@@ -35,6 +35,16 @@
                         android:layout_marginTop="11dp"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/logo" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginLeft="10dp"
+
+                      android:onClick="onbackk"  android:src="@drawable/backk"/>
                 </FrameLayout>
 
             </LinearLayout>

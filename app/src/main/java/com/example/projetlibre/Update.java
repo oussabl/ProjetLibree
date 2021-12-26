@@ -1,14 +1,17 @@
 package com.example.projetlibre;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -20,6 +23,8 @@ public class Update extends AppCompatActivity {
             edcpassword,edtelephone,edmission,
             eddate_depart,eddate_fin;
     public Button update ,back,disable;
+    AlertDialog  alertDialog;
+    int key_date =0;
     String KEY;
     DAOEmloyee dao;
     @Override
@@ -44,7 +49,7 @@ public class Update extends AppCompatActivity {
 
         Bundle bundle = new Bundle();
         bundle = getIntent().getExtras();
-         KEY = bundle.getString("key");
+        KEY = bundle.getString("key");
         String nom = bundle.getString("firstname");
         String prenom = bundle.getString("lastname");
         String tel = bundle.getString("tel");
@@ -67,7 +72,7 @@ public class Update extends AppCompatActivity {
         edpassword.setText(password);
         edcpassword.setText(password);
         }
-        
+
         private void cleandata(){
             edfname.setText("");
             edlname.setText("");
@@ -90,7 +95,6 @@ public class Update extends AppCompatActivity {
         String mission = edmission.getText().toString().trim();
         String date_dep = eddate_depart.getText().toString().trim();
         String date_fin = eddate_fin.getText().toString().trim();
-        System.out.println("tele"+telephone);
 
         employer.setFirstname(firstname);
         employer.setLastname(lastname);
@@ -147,8 +151,6 @@ public class Update extends AppCompatActivity {
             return;
         }
 
-
-
         HashMap<String, Object> hashMap = new HashMap<>();
         hashMap.put("firstname",firstname);
         hashMap.put("lastname",lastname);
@@ -156,6 +158,8 @@ public class Update extends AppCompatActivity {
         hashMap.put("telephone",telephone);
         hashMap.put("mission",mission);
         hashMap.put("password",password);
+        hashMap.put("date_depart",date_dep);
+        hashMap.put("date_fin",date_fin);
         // hashMap.put("cpassword",cpassword);
         dao.update(KEY,hashMap).addOnCompleteListener(suc ->{
             Toast.makeText(this, " Update done ", Toast.LENGTH_SHORT).show();
@@ -226,8 +230,42 @@ public class Update extends AppCompatActivity {
         alertDialog.show();
     }
 
+    @SuppressLint("SetTextI18n")
+    public void Calclick(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        View VCalPopDate = getLayoutInflater().inflate(R.layout.popcal,null);
+        CalendarView cvDate = VCalPopDate.findViewById(R.id.calendarV);
+        Button  valideCal = VCalPopDate.findViewById(R.id.btn_valide);
+        cvDate.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(@NonNull CalendarView view1, int year, int month, int dayOfMonth) {
+                System.out.println("year" + year);
+                System.out.println("year" + month);
+                System.out.println("year" + dayOfMonth);
+                if (key_date == 0) {
+                    eddate_depart.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
+                    key_date++;
+                } else if (key_date == 1) {
+                    eddate_fin.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
+                    key_date--;
+                }
+            }
+        });
 
-        /*
+        valideCal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+            }
+        });
+        builder.setView(VCalPopDate);
+        alertDialog=builder.create();
+        alertDialog.show();
+    }
+
+
+
+    /*
 
 */
 
