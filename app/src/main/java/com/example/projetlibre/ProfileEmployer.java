@@ -16,6 +16,8 @@ public class ProfileEmployer extends AppCompatActivity {
 EditText eddf,edfn,edlt,edms,eddp,edem,edtl,edpw;
     Button back ,pdf, donnee,mail;
     TextView textv ;
+    String KEY,nom,prenom,mission,email ;
+
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,23 +33,22 @@ EditText eddf,edfn,edlt,edms,eddp,edem,edtl,edpw;
         edpw = findViewById(R.id.idpw);
         eddf = findViewById(R.id.iddf);
         back = findViewById(R.id.btn_back);
-        pdf = findViewById(R.id.btn_pdf);
+        pdf = findViewById(R.id.btn_conge);
         mail = findViewById(R.id.btn_envoye);
         back = findViewById(R.id.btn_update);
         textv = findViewById(R.id.usernameEmployer);
 
         Bundle bundle = new Bundle();
         bundle = getIntent().getExtras();
-        String KEY = bundle.getString("key");
-        String nom = bundle.getString("firstname");
-        String prenom = bundle.getString("lastname");
+         KEY = bundle.getString("key");
+         nom = bundle.getString("firstname");
+         prenom = bundle.getString("lastname");
         String tel = bundle.getString("tel");
-        String mission = bundle.getString("mission");
+         mission = bundle.getString("mission");
         String date_dep = bundle.getString("date_dep");
         String date_fin = bundle.getString("date_fin");
-        String email = bundle.getString("email");
+         email = bundle.getString("email");
         String password = bundle.getString("password");
-        System.out.println("KEY  "+KEY+" "+tel +"+ tel+" + password +"+password+" + date_dep +"date_dep");
 
         System.out.println("shof"+KEY);
         edfn.setText(nom);
@@ -60,7 +61,9 @@ EditText eddf,edfn,edlt,edms,eddp,edem,edtl,edpw;
         edpw.setText(password);
         textv.setText("Welcome "+nom);
 
+
     }
+
 
     @Override
     public boolean onOptionsItemSelected( MenuItem item) {
@@ -79,11 +82,15 @@ EditText eddf,edfn,edlt,edms,eddp,edem,edtl,edpw;
         //Intent intent = new Intent(this, List.class);
         //  startActivity(intent);
     }
-    public void UploadPDF(View view) {
+    public void Reserve(View view) {
+        Intent intent_Reserve = new Intent(getApplicationContext(), Reserve_Conge.class);
+        intent_Reserve.putExtra("key", KEY);
+        intent_Reserve.putExtra("firstname", prenom);
+        intent_Reserve.putExtra("lastname", nom);
+        intent_Reserve.putExtra("mission", mission);
+        intent_Reserve.putExtra("email",email);
+        startActivity(intent_Reserve);
 
-        Toast.makeText(this, " Uoload PDF ", Toast.LENGTH_SHORT).show();
-        //Intent intent = new Intent(this, List.class);
-        //  startActivity(intent);
     }
     public void UploadDonnee(View view) {
         Toast.makeText(this, " Upload PDF ", Toast.LENGTH_SHORT).show();

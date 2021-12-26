@@ -34,7 +34,7 @@ public class Update extends AppCompatActivity {
             employer = new Employer();
             dao = new DAOEmloyee();
             update = findViewById(R.id.btn_update);
-            disable= findViewById(R.id.btn_pdf);
+            disable= findViewById(R.id.btn_conge);
             edfname= findViewById(R.id.idft);
             edlname= findViewById(R.id.idlt);
             edemail= findViewById(R.id.idem);

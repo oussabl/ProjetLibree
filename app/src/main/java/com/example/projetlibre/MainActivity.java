@@ -67,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
                         emp.getEmail().equals(username) &&
                                 emp.getPassword().equals(password))
                 {
-                 //   Log.v("LOGIN","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
                     startActivity(new Intent(this, Home.class));
                     cleanData();
 
