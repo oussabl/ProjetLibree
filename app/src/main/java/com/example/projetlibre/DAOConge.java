@@ -11,7 +11,6 @@ public class DAOConge {
     private DatabaseReference databaseReference;
     public DAOConge(){
         FirebaseDatabase db = FirebaseDatabase.getInstance();
-
         databaseReference= db.getReference(Conge.class.getSimpleName());
     }
 

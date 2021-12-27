@@ -2,11 +2,12 @@ package com.example.projetlibre;
 
 public class Conge {
     private String KEY;
+    private String keyPere;
     private String firstname;
     private String lastname;
     private String date_depart_conge;
     private String date_fin_conge;
-    private final int TOTALCONGE=18;
+    private  int TOTALCONGE=0;
 
     public Conge(String KEY, String firstname, String lastname, String date_depart_conge, String date_fin_conge) {
         this.KEY = KEY;
@@ -14,6 +15,18 @@ public class Conge {
         this.lastname = lastname;
         this.date_depart_conge = date_depart_conge;
         this.date_fin_conge = date_fin_conge;
+    }
+
+    public String getKeyPere() {
+        return keyPere;
+    }
+
+    public void setKeyPere(String keyPere) {
+        this.keyPere = keyPere;
+    }
+
+    public void setTOTALCONGE(int TOTALCONGE) {
+        this.TOTALCONGE = TOTALCONGE;
     }
 
     public String getFirstname() {

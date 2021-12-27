@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,7 +12,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -38,19 +38,20 @@
 
                     <ImageView
                         android:id="@+id/imageView"
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
                         android:layout_gravity="left"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="11dp"
-
                         android:onClick="onbackk"
-                        android:src="@drawable/backk" />
+                        android:src="@drawable/backk"
+                        tools:ignore="SpeakableTextPresentCheck" />
                 </FrameLayout>
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/linearLayout8"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:orientation="vertical"
@@ -72,117 +73,91 @@
                         android:layout_height="match_parent">
 
                         <LinearLayout
+                            android:id="@+id/linearLayout6"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="5dp"
-                            android:orientation="vertical">
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            app:layout_constraintTop_toTopOf="parent">
 
-                            <LinearLayout
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_marginTop="1dp"
+                                android:foregroundGravity="center"
+                                android:onClick="Calclick"
+                                android:padding="2dp"
+                                android:src="@drawable/cal"
+                                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:id="@+id/date_con_dep"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="horizontal">
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:gravity="center">
-
-                                    <ImageView
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
-                                        android:layout_marginTop="1dp"
-                                        android:foregroundGravity="center"
-                                        android:onClick="Calclick"
-                                        android:padding="2dp"
-                                        android:src="@drawable/cal"
-                                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-                                    <EditText
-                                        android:id="@+id/iddp_conge"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:background="@drawable/blue_border_rounded_cornwe"
-                                        android:enabled="false"
-                                        android:fontFamily="@font/poppins_regular"
-                                        android:hint="@string/date_depart"
-                                        android:inputType="text"
-                                        android:maxLines="1"
-                                        android:paddingLeft="17dp"
-                                        android:paddingTop="11dp"
-                                        android:paddingBottom="11dp"
-                                        android:textCursorDrawable="@drawable/cursor_color"
-                                        android:textSize="12sp"
-                                        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:gravity="center">
-
-                                    <ImageView
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
-                                        android:layout_marginTop="1dp"
-                                        android:foregroundGravity="center"
-                                        android:onClick="Calclick"
-                                        android:padding="2dp"
-                                        android:src="@drawable/cal"
-                                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-                                    <EditText
-                                        android:id="@+id/id_datefin_conge"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:background="@drawable/blue_border_rounded_cornwe"
-                                        android:enabled="false"
-                                        android:fontFamily="@font/poppins_regular"
-                                        android:hint="@string/date_arrive"
-                                        android:inputType="text"
-                                        android:maxLines="1"
-                                        android:paddingLeft="17dp"
-                                        android:paddingTop="11dp"
-                                        android:paddingBottom="11dp"
-                                        android:textCursorDrawable="@drawable/cursor_color"
-                                        android:textSize="12sp"
-                                        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
-                                </LinearLayout>
-
-                            </LinearLayout>
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10sp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/blue_border_rounded_cornwe"
+                                android:fontFamily="@font/poppins_regular"
+                                android:paddingLeft="17dp"
+                                android:paddingTop="11dp"
+                                android:paddingBottom="11dp"
+                                android:text="Date Depart"
+                                android:textSize="24sp" />
 
                         </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout7"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_marginTop="1dp"
+                                android:foregroundGravity="center"
+                                android:onClick="Calclick"
+                                android:padding="2dp"
+                                android:src="@drawable/cal"
+                                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:id="@+id/date_con_fin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10sp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/blue_border_rounded_cornwe"
+                                android:fontFamily="@font/poppins_regular"
+                                android:paddingLeft="17dp"
+                                android:paddingTop="11dp"
+                                android:paddingBottom="11dp"
+                                android:text="Date Fin"
+                                android:textSize="24sp" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/Validation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/blue_fill__rounded_color"
+                            android:fontFamily="@font/poppins_regular"
+                            android:onClick="Validation"
+                            android:text="Button"
+
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/date_con_dep"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:textSize="24sp"
-                    android:layout_marginLeft="10sp"
-                    android:text="Date Depart" />
-
-                <TextView
-                    android:id="@+id/date_con_fin"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:textSize="24sp"
-                    android:layout_marginLeft="10sp"
-                    android:text="Date Fin" />
-
-                <Button
-                    android:id="@+id/Validation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:onClick="Validation"
-                    android:text="Button" />
             </LinearLayout>
 
             <TextView
@@ -199,6 +174,19 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="Total de conge est :"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/linearLayout8" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
