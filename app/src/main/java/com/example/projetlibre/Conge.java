@@ -7,7 +7,10 @@ public class Conge {
     private String lastname;
     private String date_depart_conge;
     private String date_fin_conge;
-    private  int TOTALCONGE=0;
+    private  int TOTALCONGE;
+
+    public Conge() {
+    }
 
     public Conge(String KEY, String firstname, String lastname, String date_depart_conge, String date_fin_conge) {
         this.KEY = KEY;
@@ -65,10 +68,12 @@ public class Conge {
     public String toString() {
         return "Conge{" +
                 "KEY='" + KEY + '\'' +
+                ", keyPere='" + keyPere + '\'' +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
                 ", date_depart_conge='" + date_depart_conge + '\'' +
                 ", date_fin_conge='" + date_fin_conge + '\'' +
+                ", TOTALCONGE=" + TOTALCONGE +
                 '}';
     }
 
