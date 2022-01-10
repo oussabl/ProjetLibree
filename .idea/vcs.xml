@@ -2,8 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Jeux/Tic-Tac-Toe" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/JeuxApp/Tic-Tac-Toe-Mobile-App" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/ProjetLibre - Conge" vcs="Git" />
   </component>
 </project>
