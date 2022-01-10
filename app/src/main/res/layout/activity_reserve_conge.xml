@@ -176,7 +176,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/TextConge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -189,13 +189,13 @@
                 app:layout_constraintTop_toTopOf="@+id/linearLayout8" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/checkConge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="CheckConge"
-                android:onClick="checkConge"
+                android:onClick="onCheck"
                 app:layout_constraintBottom_toBottomOf="@+id/linearLayout8"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
+                app:layout_constraintTop_toBottomOf="@+id/TextConge" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

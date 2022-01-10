@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
     public void OnLogin(View view) {
         String username = edusername.getText().toString().trim();
         String password = edpassword.getText().toString().trim();
-
         if (!(username.isEmpty() && password.isEmpty())){
                  listt = new ArrayList<Employer>();
             for (int i = 1; i < LoadData().size(); i++) {
@@ -113,9 +112,9 @@ public class MainActivity extends AppCompatActivity {
                 for (DataSnapshot data : snapshot.getChildren()) {
                     Employer emp = data.getValue(Employer.class);
                     String key = data.getKey();
-                     emp.setKey(key);
+                    emp.setKey(key);
                     list.add(emp);
-                    key= data.getKey();
+                    key = data.getKey();
                 }
             }
             @Override
