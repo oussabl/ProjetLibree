@@ -150,7 +150,7 @@ public class Reserve_Conge extends AppCompatActivity {
     }
 
 
-
+/*
     public void CountConge() throws ParseException {
         listt = new ArrayList<Conge>();
         for (int i = 0; i < LoadData().size(); i++) {
@@ -173,9 +173,7 @@ public class Reserve_Conge extends AppCompatActivity {
         CountConge();
         Toast.makeText(Reserve_Conge.this, "Done1 -> "+LoadData().size(), Toast.LENGTH_SHORT).show();
     }
-
-
-
+*/
 
     @SuppressLint("WrongConstant")
     public long DateConge(String depart, String fin) throws ParseException {
