@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Email">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="711dp"
+            tools:layout_editor_absoluteY="1dp">
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blue_bg">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/logo" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="11dp"
+                        android:onClick="onbackk"
+                        android:src="@drawable/backk"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="100dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+                tools:layout_editor_absoluteX="5dp">
+
+                <LinearLayout
+                    android:id="@+id/titrename"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/idmsg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Envoye Message"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/admin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:paddingStart="9sp"
+                        android:text="Email d'administration : "
+                        android:textSize="14sp" />
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:minHeight="48dp"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/boddy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    tools:ignore="MissingConstraints">
+
+                    <EditText
+                        android:id="@+id/emailtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15sp"
+                        android:ems="14"
+                        android:gravity="start|top"
+                        android:hint="Titre de votre message"
+                        android:inputType="text"
+                        android:paddingStart="8sp"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <EditText
+                        android:id="@+id/emailBoddy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15sp"
+                        android:layout_marginBottom="15sp"
+                        android:ems="14"
+                        android:gravity="start|top"
+                        android:hint="Ecrite votre email"
+                        android:inputType="textMultiLine"
+                        android:paddingStart="8sp"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

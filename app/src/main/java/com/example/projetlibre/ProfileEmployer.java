@@ -74,8 +74,8 @@ EditText eddf,edfn,edlt,edms,eddp,edem,edtl,edpw;
     }
 
     public void SendMail(View view) {
-        Toast.makeText(this, " for send mail  ", Toast.LENGTH_SHORT).show();
-
+        Intent intent = new Intent(this, Email.class);
+         startActivity(intent);
     }
     public void OnBack(View view) {
         Toast.makeText(this, " We dont need it ", Toast.LENGTH_SHORT).show();

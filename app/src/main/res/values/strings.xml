@@ -18,5 +18,9 @@
     <string name="datefin">Date fin</string>
     <string name="updateuser">Update User</string>
     <string name="update_user">Update</string>
-
+<string-array name="arrayy">
+    <item> Oussama </item>
+    <item> Doae </item>
+    <item> Safae </item>
+</string-array>
 </resources>

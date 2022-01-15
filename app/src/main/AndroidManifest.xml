@@ -4,11 +4,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/dso"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetLibre.NoActionBar">
+        <activity
+            android:name=".Email"
+            android:exported="false" />
         <activity
             android:name=".Reserve_Conge"
             android:exported="false" />
