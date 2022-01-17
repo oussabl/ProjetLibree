@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -102,10 +103,10 @@ EditText eddf,edfn,edlt,edms,eddp,edem,edtl,edpw;
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         View Selectedchoix = getLayoutInflater().inflate(R.layout.selectedchoix, null);
 
-        Button pdf = Selectedchoix.findViewById(R.id.btn_pdf);
-        Button img = Selectedchoix.findViewById(R.id.btn_img);
+        LinearLayout pdff = Selectedchoix.findViewById(R.id.btn_pdf);
+        LinearLayout imgg = Selectedchoix.findViewById(R.id.btn_img);
 
-        pdf.setOnClickListener(new View.OnClickListener() {
+        pdff.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent_PDF = new Intent(getApplicationContext(), MainPDF.class);
@@ -118,7 +119,7 @@ EditText eddf,edfn,edlt,edms,eddp,edem,edtl,edpw;
                 startActivity(intent_PDF);
             }
         });
-        img.setOnClickListener(new View.OnClickListener() {
+        imgg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent_image = new Intent(getApplicationContext(), MainImage.class);

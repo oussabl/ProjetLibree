@@ -43,12 +43,13 @@ public class MainPDF extends AppCompatActivity {
 
          btn = findViewById(R.id.btn_valide);
          etxt = findViewById(R.id.idpdf);
-        mtxt = findViewById(R.id.idtextt);
+         mtxt = findViewById(R.id.idtextt);
 
          storageReference = FirebaseStorage.getInstance().getReference();
          databaseReference= FirebaseDatabase.getInstance().getReference(PutPDF.class.getSimpleName());
 
         btn.setEnabled(false);
+
         etxt.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -85,6 +86,7 @@ public class MainPDF extends AppCompatActivity {
 
     private void uploadPDFFileFirebase(Uri data) {
         final ProgressDialog progressDialog = new ProgressDialog(this);
+
         progressDialog.setTitle("File is loading ...");
         progressDialog.show();
         StorageReference reference = storageReference.child(mtxt.getText().toString()+""+System.currentTimeMillis()+".pdf");
@@ -108,6 +110,11 @@ public class MainPDF extends AppCompatActivity {
             }
         });
     }
+
+
+
+
+
 
 
     public void onbackk(View view) {

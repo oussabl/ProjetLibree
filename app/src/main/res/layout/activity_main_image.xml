@@ -58,8 +58,15 @@
             <ImageView
                 android:id="@+id/imagecapture"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:src="@drawable/backimage" />
+
+            <EditText
+                android:id="@+id/nomimage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tape nom of the file"
+                />
         </LinearLayout>
 
         <LinearLayout

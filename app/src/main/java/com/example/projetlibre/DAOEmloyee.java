@@ -29,6 +29,8 @@ public class DAOEmloyee {
     }
     public Query get(){
         return databaseReference.orderByKey();
+    }public Query getuser(){
+        return databaseReference.child("");
     }
 
 }

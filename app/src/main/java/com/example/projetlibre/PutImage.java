@@ -1,16 +1,16 @@
 package com.example.projetlibre;
 
-public class PutPDF {
+public class PutImage {
 
     public String name ;
     public String url;
     public String key;
     public String user;
 
-    public PutPDF() {
+    public PutImage() {
     }
 
-    public PutPDF(String name, String url, String key, String user) {
+    public PutImage(String name, String url, String key, String user) {
         this.name = name;
         this.url = url;
         this.key = key;
@@ -20,9 +20,6 @@ public class PutPDF {
     public String getName() {
         return name;
     }
-
-
-
 
     public void setName(String name) {
         this.name = name;
@@ -52,3 +49,4 @@ public class PutPDF {
         this.user = user;
     }
 }
+
