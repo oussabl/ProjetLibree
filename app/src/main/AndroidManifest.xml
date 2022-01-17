@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.projetlibre">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"></uses-permission>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/dso"
@@ -12,6 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetLibre.NoActionBar">
+        <activity
+            android:name=".MainImage"
+            android:exported="false" />
         <activity
             android:name=".Email"
             android:exported="false" />
@@ -32,6 +37,9 @@
             android:exported="true" />
         <activity
             android:name=".Register"
+            android:exported="true" />
+        <activity
+            android:name=".MainPDF"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

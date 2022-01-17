@@ -83,6 +83,7 @@ public class Reserve_Conge extends AppCompatActivity {
     public void Calclick(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         View VCalPopDate = getLayoutInflater().inflate(R.layout.popcal, null);
+
         CalendarView cvDate = VCalPopDate.findViewById(R.id.calendarV);
         Button valideCal = VCalPopDate.findViewById(R.id.btn_valide);
         cvDate.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
@@ -112,6 +113,8 @@ public class Reserve_Conge extends AppCompatActivity {
         alertDialog = builder.create();
         alertDialog.show();
     }
+
+
     public void onbackk(View view) {
         Intent intent = new Intent(getApplicationContext(), ProfileEmployer.class);
         startActivity(intent);

@@ -1,5 +1,7 @@
 package com.example.projetlibre;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -8,6 +10,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,6 +20,7 @@ EditText eddf,edfn,edlt,edms,eddp,edem,edtl,edpw;
     Button back ,pdf, donnee,mail;
     TextView textv ;
     String KEY,nom,prenom,mission,email ;
+    AlertDialog  alertDialog;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -89,10 +93,52 @@ EditText eddf,edfn,edlt,edms,eddp,edem,edtl,edpw;
         intent_Reserve.putExtra("lastname", nom);
         intent_Reserve.putExtra("mission", mission);
         intent_Reserve.putExtra("email",email);
+
         startActivity(intent_Reserve);
 
     }
     public void UploadDonnee(View view) {
-        Toast.makeText(this, " Upload PDF ", Toast.LENGTH_SHORT).show();
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        View Selectedchoix = getLayoutInflater().inflate(R.layout.selectedchoix, null);
+
+        Button pdf = Selectedchoix.findViewById(R.id.btn_pdf);
+        Button img = Selectedchoix.findViewById(R.id.btn_img);
+
+        pdf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_PDF = new Intent(getApplicationContext(), MainPDF.class);
+                intent_PDF.putExtra("key", KEY);
+                intent_PDF.putExtra("firstname", prenom);
+                intent_PDF.putExtra("lastname", nom);
+                intent_PDF.putExtra("mission", mission);
+                intent_PDF.putExtra("email",email);
+
+                startActivity(intent_PDF);
+            }
+        });
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_image = new Intent(getApplicationContext(), MainImage.class);
+                intent_image.putExtra("key", KEY);
+                intent_image.putExtra("firstname", prenom);
+                intent_image.putExtra("lastname", nom);
+                intent_image.putExtra("mission", mission);
+                intent_image.putExtra("email",email);
+
+                startActivity(intent_image);            }
+        });
+        builder.setView(Selectedchoix);
+        alertDialog = builder.create();
+        alertDialog.show();
+
+      /*  Intent intent_PDF = new Intent(this, MainPDF.class);
+        intent_PDF.putExtra("key", KEY);
+        intent_PDF.putExtra("firstname", prenom);
+        intent_PDF.putExtra("lastname", nom);
+        //setResult(RESULT_OK, intent_PDF);
+        startActivity(intent_PDF);*/
     }
 }
