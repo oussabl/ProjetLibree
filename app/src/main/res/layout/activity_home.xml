@@ -190,14 +190,13 @@
                         android:onClick="dialog"
                         android:orientation="horizontal">
 
-
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1">
 
                             <ImageView
-                                android:id="@+id/delete"
+                                android:id="@+id/chercher_user"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginStart="35dp"
@@ -220,7 +219,7 @@
 
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/delete" />
+                                app:layout_constraintTop_toBottomOf="@+id/chercher_user" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -259,7 +258,7 @@
                                 app:layout_constraintTop_toBottomOf="@+id/btn_list_pdf" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
-                        />
+
                     </LinearLayout>
 
                     <LinearLayout
