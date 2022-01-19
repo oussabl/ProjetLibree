@@ -1,4 +1,4 @@
-package com.example.projetlibre;
+package com.example.projetlibre.Model;
 
 import com.google.firebase.database.Exclude;
 

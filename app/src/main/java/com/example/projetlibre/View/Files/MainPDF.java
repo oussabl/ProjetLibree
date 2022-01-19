@@ -1,4 +1,4 @@
-package com.example.projetlibre;
+package com.example.projetlibre.View.Files;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -13,6 +13,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.projetlibre.Model.PutPDF;
+import com.example.projetlibre.R;
+import com.example.projetlibre.View.ProfileEmployer;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;

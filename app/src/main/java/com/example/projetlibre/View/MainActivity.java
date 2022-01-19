@@ -1,4 +1,4 @@
-package com.example.projetlibre;
+package com.example.projetlibre.View;
 
 
 import androidx.annotation.NonNull;
@@ -7,20 +7,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.gms.tasks.Task;
+import com.example.projetlibre.Controlle.DAOEmloyee;
+import com.example.projetlibre.Model.Employer;
+import com.example.projetlibre.R;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -63,18 +59,20 @@ public class MainActivity extends AppCompatActivity {
                // emp = new Employer();
                 listt = LoadData();
                   emp = listt.get(i);
-                    if (emp.getMission().equals("admin") &&
-                        emp.getEmail().equals(username) &&
-                                emp.getPassword().equals(password))
+        if (emp.getMission().equals("admin") && emp.getEmail().equals(username) && emp.getPassword().equals(password))
                 {
-                    startActivity(new Intent(this, Home.class));
-                   // cleanData();
-
+                    Intent intent_Home = new Intent(this, Home.class);
+                    intent_Home.putExtra("key", emp.getKey());
+                    intent_Home.putExtra("firstname", emp.getFirstname());
+                    intent_Home.putExtra("lastname", emp.getLastname());
+                    intent_Home.putExtra("mission", emp.getMission());
+                    intent_Home.putExtra("email", emp.getEmail());
+                    startActivity(intent_Home);
                 }
                  else if (  emp.getEmail().equals(username) &&
                             emp.getPassword().equals(password))
                 {
-                    Intent intent_Chercher = new Intent(getApplicationContext(), ProfileEmployer.class);
+                    Intent intent_Chercher = new Intent(this, ProfileEmployer.class);
                     intent_Chercher.putExtra("key", emp.getKey());
                     intent_Chercher.putExtra("firstname", emp.getFirstname());
                     intent_Chercher.putExtra("lastname", emp.getLastname());

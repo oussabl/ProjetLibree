@@ -1,4 +1,4 @@
-package com.example.projetlibre;
+package com.example.projetlibre.Model;
 
 public class Conge {
     private String KEY;

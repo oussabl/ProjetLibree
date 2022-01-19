@@ -1,4 +1,4 @@
-package com.example.projetlibre;
+package com.example.projetlibre.Controlle;
 
 
 
@@ -13,6 +13,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.projetlibre.Model.Employer;
+import com.example.projetlibre.R;
+import com.example.projetlibre.View.Update;
 
 import java.util.ArrayList;
 

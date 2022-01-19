@@ -15,40 +15,47 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetLibre.NoActionBar">
         <activity
-            android:name=".ListMessage"
+            android:name=".View.Messages.ListMessage"
             android:exported="false" />
         <activity
-            android:name=".MainActivity_list_pdf"
+        android:name=".View.Messages.SendEmail"
+        android:exported="false" />
+
+        <activity
+        android:name=".View.ListConge"
+        android:exported="false" />
+        <activity
+            android:name=".View.Files.MainActivity_list_pdf"
             android:exported="false" />
         <activity
-            android:name=".MainImage"
+            android:name=".View.Files.MainImage"
             android:exported="false" />
         <activity
-            android:name=".Email"
+            android:name=".View.Messages.ReadEmail"
             android:exported="false" />
         <activity
-            android:name=".Reserve_Conge"
+            android:name=".View.Reserve_Conge"
             android:exported="false" />
         <activity
-            android:name=".Update"
+            android:name=".View.Update"
             android:exported="true" />
         <activity
-            android:name=".ProfileEmployer"
+            android:name=".View.ProfileEmployer"
             android:exported="true" />
         <activity
-            android:name=".List"
+            android:name=".View.List"
             android:exported="true" />
         <activity
-            android:name=".Home"
+            android:name=".View.Home"
             android:exported="true" />
         <activity
-            android:name=".Register"
+            android:name=".View.Register"
             android:exported="true" />
         <activity
-            android:name=".MainPDF"
+            android:name=".View.Files.MainPDF"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".View.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

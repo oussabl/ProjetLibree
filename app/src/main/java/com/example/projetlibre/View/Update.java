@@ -1,4 +1,4 @@
-package com.example.projetlibre;
+package com.example.projetlibre.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -14,6 +14,10 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.projetlibre.Controlle.DAOEmloyee;
+import com.example.projetlibre.Model.Employer;
+import com.example.projetlibre.R;
 
 import java.util.HashMap;
 

@@ -1,4 +1,4 @@
-package com.example.projetlibre;
+package com.example.projetlibre.View;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -13,6 +13,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.projetlibre.Controlle.DAOEmloyee;
+import com.example.projetlibre.Model.Employer;
+import com.example.projetlibre.R;
 
 public class Register extends AppCompatActivity{
 

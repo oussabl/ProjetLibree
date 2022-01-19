@@ -1,5 +1,6 @@
-package com.example.projetlibre;
+package com.example.projetlibre.Controlle;
 
+import com.example.projetlibre.Model.Employer;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -32,5 +33,6 @@ public class DAOEmloyee {
     }public Query getuser(){
         return databaseReference.child("");
     }
+
 
 }

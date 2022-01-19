@@ -1,4 +1,4 @@
-package com.example.projetlibre;
+package com.example.projetlibre.View.Files;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -15,6 +15,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.projetlibre.Model.PutPDF;
+import com.example.projetlibre.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -61,7 +63,7 @@ public class MainActivity_list_pdf extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot ds: snapshot.getChildren()) {
-                    PutPDF putPDF = ds.getValue(com.example.projetlibre.PutPDF.class);
+                    PutPDF putPDF = ds.getValue(PutPDF.class);
                     uploadedPDF.add(putPDF);
                     uploadeduser.add(putPDF);
 

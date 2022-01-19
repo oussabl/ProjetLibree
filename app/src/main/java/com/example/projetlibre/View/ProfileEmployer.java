@@ -1,6 +1,5 @@
-package com.example.projetlibre;
+package com.example.projetlibre.View;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,11 +9,16 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.projetlibre.R;
+import com.example.projetlibre.View.Files.MainImage;
+import com.example.projetlibre.View.Files.MainPDF;
+import com.example.projetlibre.View.Messages.ListMessage;
+import com.example.projetlibre.View.Messages.SendEmail;
 
 public class ProfileEmployer extends AppCompatActivity {
 EditText eddf,edfn,edlt,edms,eddp,edem,edtl,edpw;
@@ -79,14 +83,16 @@ EditText eddf,edfn,edlt,edms,eddp,edem,edtl,edpw;
     }
 
     public void SendMail(View view) {
-        Intent intent = new Intent(this, Email.class);
-         startActivity(intent);
+        Intent intent = new Intent(ProfileEmployer.this, SendEmail.class);
+        intent.putExtra("key", KEY);
+        intent.putExtra("firstname", prenom);
+        intent.putExtra("lastname", nom);
+        intent.putExtra("mission", mission);
+        intent.putExtra("email",email);
+
+        startActivity(intent);
     }
-    public void OnBack(View view) {
-        Toast.makeText(this, " We dont need it ", Toast.LENGTH_SHORT).show();
-        //Intent intent = new Intent(this, List.class);
-        //  startActivity(intent);
-    }
+
     public void Reserve(View view) {
         Intent intent_Reserve = new Intent(getApplicationContext(), Reserve_Conge.class);
         intent_Reserve.putExtra("key", KEY);

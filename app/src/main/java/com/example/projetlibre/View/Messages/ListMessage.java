@@ -1,13 +1,16 @@
-package com.example.projetlibre;
+package com.example.projetlibre.View.Messages;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 
+import com.example.projetlibre.R;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -22,5 +25,8 @@ public class ListMessage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }}
+        setContentView(R.layout.activity_list_message);
+
+
+    }
+}

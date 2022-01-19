@@ -10,12 +10,16 @@
         <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/drawable/listview_item_border.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/UploadPDF.xml" value="0.1" />
+        <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/activity_consulationemail.xml" value="0.1" />
         <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/activity_email.xml" value="0.25" />
         <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/activity_home.xml" value="0.22" />
+        <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/activity_list_message.xml" value="0.11481481481481481" />
         <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/activity_main_image.xml" value="0.2" />
+        <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/activity_main_list_conge.xml" value="0.11481481481481481" />
         <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/activity_main_list_pdf.xml" value="0.22" />
         <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/activity_profile_employer.xml" value="0.2" />
+        <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/activity_reademail.xml" value="0.1" />
         <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/activity_register.xml" value="0.1814814814814815" />
         <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/activity_reserve_conge.xml" value="0.17865429234338748" />
         <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/activity_update.xml" value="0.1" />
@@ -25,6 +29,7 @@
         <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/image.xml" value="0.1814814814814815" />
         <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/imagee.xml" value="0.1814814814814815" />
         <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/item.xml" value="0.1814814814814815" />
+        <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/itememail.xml" value="0.11944444444444445" />
         <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/phto.xml" value="0.1814814814814815" />
         <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/popcal.xml" value="0.1814814814814815" />
         <entry key="..\:/Users/oussa/AndroidStudioProjects/ProjetLibre/app/src/main/res/layout/selectedchoix.xml" value="0.22" />
