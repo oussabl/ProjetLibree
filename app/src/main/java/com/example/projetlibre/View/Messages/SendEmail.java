@@ -74,8 +74,7 @@ public class SendEmail extends AppCompatActivity {
                     emp.setKey(key);
                     list.add(emp);
 
-                if (!(mission.equals("admin") &&
-                        emp.getMission().equals("admin")))
+                if (!(mission.equals("admin") && emp.getMission().equals("admin")))
                 {
                     //Dans cette partie justement on a ajouter a spinner les users qui avant de user admin est les auters n'est pas ajouter ..
                     listSpinner.add(emp.getLastname()+" "+emp.getFirstname());
@@ -88,16 +87,26 @@ public class SendEmail extends AppCompatActivity {
 
 
                 }
+
                 else if (!mission.equals("admin")){
                     System.out.println("******4");
+                    if (( emp.getMission().equals("admin")))
+                    {
+                        //Dans cette partie justement on a ajouter a spinner les users qui avant de user admin est les auters n'est pas ajouter ..
+                        listSpinner.add(emp.getLastname()+" "+emp.getFirstname());
+                        System.out.println("******55");
 
-                    listSpinner.add("Belarbi Oussama");
-                    listSpinner.add("Morsou Doae");
-                    listSpinner.add("Mouhib Sanae");
+                        ArrayAdapter<String> myAdapter=  new ArrayAdapter<String>(SendEmail.this,
+                                android.R.layout.simple_list_item_1,listSpinner);
+                        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        mySpinner.setAdapter(myAdapter);
+
+                    }
+/*
                     ArrayAdapter<String> myAdapter=  new ArrayAdapter<String>(SendEmail.this,
                             android.R.layout.simple_list_item_1,listSpinner);
                     myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                    mySpinner.setAdapter(myAdapter);
+                    mySpinner.setAdapter(myAdapter);*/
 
                 }
 

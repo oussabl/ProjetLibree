@@ -56,6 +56,10 @@ public class Conge {
         this.lastname = lastname;
     }
 
+    public String getUsers(){
+        return  lastname+" "+firstname;
+    }
+
     public String getDate_depart_conge() {
         return date_depart_conge;
     }

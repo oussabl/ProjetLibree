@@ -29,8 +29,8 @@ import java.util.List;
 
 public class MainActivity_list_pdf extends AppCompatActivity {
 
-        ListView listusers , listimages;
-        DatabaseReference databaseReference;
+    ListView listusers , listimages;
+    DatabaseReference databaseReference;
     List<PutPDF> uploadedPDF;
     List<PutPDF> uploadeduser;
     @Override

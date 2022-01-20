@@ -199,6 +199,8 @@ public class Reserve_Conge extends AppCompatActivity {
             int ress =  (int)(difff / (1000*60*60*24));
             String resulta = String.valueOf(ress);
             TextConge.setText(resulta);
+            conge.setTOTALCONGE(ress);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
