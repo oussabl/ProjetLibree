@@ -18,13 +18,26 @@
     <string name="datefin">Date fin</string>
     <string name="updateuser">Update User</string>
     <string name="update_user">Update</string>
-    <string-array name="arrayy">
-        <item> Oussama </item>
-        <item> Doae </item>
-        <item> Safae </item>
+    <string-array name="listarrayy">
+        <item> Belarbi Oussama </item>
+        <item> Morsou Doae </item>
+        <item> Mouhib Sanaâ </item>
+        <item> Laftif yousra </item>
+        <item> Belarbi Ali </item>
+        <item> Stitou Yahya </item>
+    </string-array>
+    <string-array name="listadmin">
+        <item> Belarbi Oussama </item>
+        <item> Morsou Doae </item>
+        <item> Mouhib sanaâ </item>
     </string-array>
     <string name="title_activity_main_list_pdf">MainActivity_list_pdf</string>
-    <!-- Strings used for fragments for navigation -->
+    <string name="emessage">Envoye message</string>
+    <string name="dconge">Demande Conge</string>
+    <string name="welcome">Welcome</string>
+    <string name="lclient">List Client</string>
+    <string name="ajouter">Ajouter</string>
+
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>

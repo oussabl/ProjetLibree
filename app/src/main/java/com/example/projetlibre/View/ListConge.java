@@ -46,21 +46,20 @@ public class ListConge extends AppCompatActivity {
         listjour = findViewById(R.id.listtjour);
 
         lists_Congee = new ArrayList<>();
-
         retrievePDFFiles();
-
     }
 
     private void retrievePDFFiles() {
         databaseReference = FirebaseDatabase.getInstance().getReference("Conge");
+
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot ds: snapshot.getChildren()) {
                     Conge conge = ds.getValue(Conge.class);
                     lists_Congee.add(conge);
-                  //  uploadeduser.add(conge);
-                 //   uploadeddate.add(conge);
+                    // uploadeduser.add(conge);
+                    // uploadeddate.add(conge);
 
                 }
                 String[] colnbr = new String[lists_Congee.size()];
@@ -76,9 +75,10 @@ public class ListConge extends AppCompatActivity {
                 }
                 ArrayAdapter<String> arrayAdapterdate = new ArrayAdapter<String>(getApplicationContext(),
                         android.R.layout.simple_list_item_1,coldate){
-                    @NonNull
-                    @Override
-                    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+
+    @NonNull
+    @Override
+    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
                         View view = super.getView(position, convertView, parent);
                         TextView textView = (TextView) view.findViewById(android.R.id.text1);
                         textView.setTextColor(Color.rgb(21, 102, 224));
@@ -119,6 +119,7 @@ public class ListConge extends AppCompatActivity {
                         return view;
                     }
                 };
+
                 ArrayAdapter<String> arrayAdapternbr = new ArrayAdapter<String>(getApplicationContext(),
                         android.R.layout.simple_list_item_1,colnbr){
                     @NonNull
@@ -141,7 +142,6 @@ public class ListConge extends AppCompatActivity {
                 listdatearr.setAdapter(arrayAdapterdatearr);
 
             }
-
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

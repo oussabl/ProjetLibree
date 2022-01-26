@@ -19,6 +19,7 @@ import com.example.projetlibre.View.Files.MainImage;
 import com.example.projetlibre.View.Files.MainPDF;
 import com.example.projetlibre.View.Messages.ListMessage;
 import com.example.projetlibre.View.Messages.SendEmail;
+import com.example.projetlibre.View.Messages.SendEmailC;
 
 public class ProfileEmployer extends AppCompatActivity {
 EditText eddf,edfn,edlt,edms,eddp,edem,edtl,edpw;
@@ -73,7 +74,6 @@ EditText eddf,edfn,edlt,edms,eddp,edem,edtl,edpw;
 
     }
 
-
     @Override
     public boolean onOptionsItemSelected( MenuItem item) {
         if (item.getItemId()== android.R.id.home)
@@ -83,7 +83,7 @@ EditText eddf,edfn,edlt,edms,eddp,edem,edtl,edpw;
     }
 
     public void SendMail(View view) {
-        Intent intent = new Intent(ProfileEmployer.this, SendEmail.class);
+        Intent intent = new Intent(ProfileEmployer.this, SendEmailC.class);
         intent.putExtra("key", KEY);
         intent.putExtra("firstname", prenom);
         intent.putExtra("lastname", nom);
@@ -100,10 +100,10 @@ EditText eddf,edfn,edlt,edms,eddp,edem,edtl,edpw;
         intent_Reserve.putExtra("lastname", nom);
         intent_Reserve.putExtra("mission", mission);
         intent_Reserve.putExtra("email",email);
-
         startActivity(intent_Reserve);
 
     }
+
     public void UploadDonnee(View view) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

@@ -27,15 +27,17 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/blue_bg">
+                    android:background="@drawable/blue_bg"
+                    tools:ignore="UselessParent">
 
                     <ImageView
                         android:layout_width="45dp"
                         android:layout_height="45dp"
                         android:layout_gravity="right"
                         android:layout_marginTop="11dp"
-                        android:layout_marginRight="10dp"
-                        android:src="@drawable/logo" />
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/logo"
+                        tools:ignore="ContentDescription,RtlHardcoded" />
                 </FrameLayout>
 
             </LinearLayout>
@@ -46,7 +48,8 @@
                 android:layout_height="502dp"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+                android:baselineAligned="false">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -59,13 +62,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:ignore="NestedWeights">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
+                            android:layout_height="match_parent">
 
                             <ImageView
                                 android:id="@+id/btn_add"
@@ -80,14 +82,15 @@
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
-                                app:srcCompat="@android:drawable/ic_menu_add" />
+                                app:srcCompat="@android:drawable/ic_menu_add"
+                                tools:ignore="ContentDescription" />
 
                             <TextView
                                 android:id="@+id/textView4"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center_horizontal"
-                                android:text="Ajouter"
+                                android:text="@string/ajouter"
                                 app:layout_constraintTop_toBottomOf="@+id/btn_add" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -104,8 +107,7 @@
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
+                            android:layout_height="match_parent">
 
                             <ImageView
                                 android:id="@+id/btn_list"
@@ -126,7 +128,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center_horizontal"
-                                android:text="List Client"
+                                android:text="@string/lclient"
                                 app:layout_constraintTop_toBottomOf="@+id/btn_list" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -137,13 +139,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-
                         android:orientation="horizontal">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
+                            android:layout_height="match_parent">
 
                             <ImageView
                                 android:id="@+id/btn_list_message"
@@ -167,13 +167,13 @@
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
 
-                    </LinearLayout>
+                            </LinearLayout>
                 </LinearLayout>
 
 
@@ -188,13 +188,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:id="@+id/lchercher"
-                        android:onClick="dialogCherche"
+                        android:onClick="lchercher"
                         android:orientation="horizontal">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1">
+                            >
 
                             <ImageView
                                 android:id="@+id/chercher_user"
@@ -204,7 +204,6 @@
                                 android:layout_marginTop="35dp"
                                 android:layout_marginEnd="35dp"
                                 android:layout_marginBottom="35dp"
-                                android:layout_weight="1"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -217,7 +216,6 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center_horizontal"
                                 android:text="Cherche"
-
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/chercher_user" />
@@ -235,8 +233,7 @@
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
+                            android:layout_height="match_parent">
 
                             <ImageView
                                 android:id="@+id/btn_list_pdf"
@@ -270,9 +267,7 @@
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-
-                            android:layout_weight="1">
+                            android:layout_height="match_parent">
 
                             <ImageView
                                 android:id="@+id/btn_list_vide"
@@ -290,7 +285,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center_horizontal"
-                                android:text="Envoye message"
+                                android:text="@string/emessage"
                                 app:layout_constraintTop_toBottomOf="@+id/btn_list_vide" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -314,13 +309,11 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:id="@+id/deletee"
-
                         android:orientation="horizontal">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
+                            android:layout_height="match_parent">
 
                             <ImageView
                                 android:id="@+id/delete"
@@ -330,7 +323,6 @@
                                 android:layout_marginTop="35dp"
                                 android:layout_marginEnd="35dp"
                                 android:layout_marginBottom="35dp"
-                                android:layout_weight="1"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -344,7 +336,6 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center_horizontal"
                                 android:text="@string/delete"
-
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/delete" />
@@ -357,7 +348,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:id="@+id/btn_list_congee"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:baselineAligned="false">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="0dp"
@@ -380,7 +372,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center_horizontal"
-                                android:text="List Conge"
+                                android:text="@string/dconge"
                                 app:layout_constraintTop_toBottomOf="@+id/btn_list_conge"/>
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -390,7 +382,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        tools:ignore="UselessLeaf">
 
                     </LinearLayout>
 
@@ -409,8 +402,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="24sp"
-
-                android:text="EMPLOYER"
+                android:text="@string/welcome"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="#F0FFFFFF"
                 android:textSize="20sp"

@@ -39,20 +39,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         list = new ArrayList<>();
 
         mAuth = FirebaseAuth.getInstance();
+
         btn_Login = findViewById(R.id.btn_login);
         edpassword = findViewById(R.id.password_input);
         edusername = findViewById(R.id.username_input);
     }
 
-
     @SuppressLint("WrongConstant")
     public void OnLogin(View view) {
         String username = edusername.getText().toString().trim();
         String password = edpassword.getText().toString().trim();
+
         if (!(username.isEmpty() && password.isEmpty())){
                  listt = new ArrayList<Employer>();
             for (int i = 1; i < LoadData().size(); i++) {
@@ -86,8 +86,9 @@ public class MainActivity extends AppCompatActivity {
                     cleanData();
 
                 }
+                 // else{}
             }
-            //cleanData();
+
         }
         if (username.isEmpty()) {
             edusername.setError("Username is required");
@@ -98,10 +99,11 @@ public class MainActivity extends AppCompatActivity {
             edpassword.requestFocus();
         }
     }
+
     public void cleanData(){
         edpassword.setText("");
         edusername.setText("");
-    }
+        }
 
     public ArrayList<Employer> LoadData(){
         dao.get().addValueEventListener(new ValueEventListener() {
@@ -123,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
         });
         return list;
     }
+
 
     }
 
