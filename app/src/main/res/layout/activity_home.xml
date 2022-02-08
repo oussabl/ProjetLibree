@@ -161,7 +161,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center_horizontal"
-                                android:text="List Message"
+                                android:text="Message"
                                 app:layout_constraintTop_toBottomOf="@+id/btn_list_message" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -267,28 +267,7 @@
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <ImageView
-                                android:id="@+id/btn_list_vide"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_margin="45sp"
-                                android:layout_weight="1"
-                                android:background="@drawable/instagram"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
-                                android:text="@string/emessage"
-                                app:layout_constraintTop_toBottomOf="@+id/btn_list_vide" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                            android:layout_height="match_parent"/>
                     </LinearLayout>
 
                     <LinearLayout

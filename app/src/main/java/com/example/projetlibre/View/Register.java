@@ -128,9 +128,6 @@ public class Register extends AppCompatActivity{
         employer.setDate_fin(date_fin);
         employer.setTelephone(telephone);
 
-        // dont need it we use id here
-      //  reff.child(String.valueOf(maxid+1)).setValue(employer );
-
         //  Add user
      dao.add(employer).addOnCompleteListener(suc ->{
             Toast.makeText(this, " THIS"+firstname+','+lastname+','+telephone+','+date_dep+" \n DATA INSERT Succesfully ", Toast.LENGTH_SHORT).show();
@@ -186,29 +183,4 @@ public class Register extends AppCompatActivity{
     }
 
 
-    /*
-    @SuppressLint("SetTextI18n")
-    public void Calclick1(View view) {
-        AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
-        View VCalPopDate1 = getLayoutInflater().inflate(R.layout.popcal,null);
-        CalendarView cvDate1 = VCalPopDate1.findViewById(R.id.calendarV);
-        Button  valideCal1 = VCalPopDate1.findViewById(R.id.btn_valide);
-        cvDate1.setOnDateChangeListener((view1, year, month, dayOfMonth) -> {
-            System.out.println("year"+year);
-            System.out.println("year"+month);
-            System.out.println("year"+dayOfMonth);
-            eddate_fin.setText(dayOfMonth+"/"+(month+1)+"/"+year);
-
-        });
-        valideCal1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                alertDialog.dismiss();
-            }
-        });
-        builder1.setView(VCalPopDate1);
-        alertDialog=builder1.create();
-        alertDialog.show();
-    }
-*/
 }

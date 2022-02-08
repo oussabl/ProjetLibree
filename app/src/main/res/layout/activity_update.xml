@@ -350,7 +350,7 @@
                             android:fontFamily="@font/poppins_regular"
                             android:gravity="center"
                             android:onClick="OnUpdate"
-                            android:text="upload"
+                            android:text="update"
                             android:textColor="#ffffff"
                             android:textSize="12sp"
                             tools:ignore="InvalidId,TouchTargetSizeCheck" />

@@ -148,14 +148,14 @@ public class Reserve_Conge extends AppCompatActivity {
         listt = new ArrayList<Conge>();
         for (int i = 0; i < LoadData().size(); i++) {
             listt = LoadData();
-              conge = listt.get(i);
+            conge = listt.get(i);
             if (conge.getKEY().equalsIgnoreCase(KEY)){
                 Toast.makeText(this, " this done", Toast.LENGTH_SHORT).show();
                 String dated = conge.getDate_depart_conge();
                 String datef = conge.getDate_fin_conge();
-                    DateConge(dated,datef);
-                    // if you need met pause in you program
-              //      Thread.sleep(10000);
+                DateConge(dated,datef);
+                // if you need met pause in you program
+                //      Thread.sleep(10000);
             }
             else{
                 Toast.makeText(this, " not  done", Toast.LENGTH_SHORT).show();
@@ -199,8 +199,6 @@ public class Reserve_Conge extends AppCompatActivity {
             int ress =  (int)(difff / (1000*60*60*24));
             String resulta = String.valueOf(ress);
             TextConge.setText(resulta);
-            conge.setTOTALCONGE(ress);
-
         } catch (Exception e) {
             e.printStackTrace();
         }

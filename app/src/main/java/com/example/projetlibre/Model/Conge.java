@@ -7,7 +7,7 @@ public class Conge {
     private String lastname;
     private String date_depart_conge;
     private String date_fin_conge;
-    private  int TOTALCONGE;
+    private  int  TOTALCONGE;
 
     public Conge() {
     }
@@ -18,6 +18,15 @@ public class Conge {
         this.lastname = lastname;
         this.date_depart_conge = date_depart_conge;
         this.date_fin_conge = date_fin_conge;
+    }
+
+    public Conge(String KEY, String firstname, String lastname, String date_depart_conge, String date_fin_conge, int TOTALCONGE) {
+        this.KEY = KEY;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.date_depart_conge = date_depart_conge;
+        this.date_fin_conge = date_fin_conge;
+        this.TOTALCONGE = TOTALCONGE;
     }
 
     public String getKeyPere() {

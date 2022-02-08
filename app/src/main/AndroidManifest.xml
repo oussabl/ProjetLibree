@@ -14,13 +14,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetLibre.NoActionBar">
+
         <activity
             android:name=".View.Messages.ListMessage"
             android:exported="false" />
         <activity
-        android:name=".View.Messages.SendEmail"
-        android:exported="false" />
-
+            android:name=".View.Messages.SendEmail"
+            android:exported="false" />
+        <activity
+            android:name=".View.Messages.SendEmailC"
+            android:exported="false" />
         <activity
         android:name=".View.ListConge"
         android:exported="false" />
@@ -54,15 +57,16 @@
         <activity
             android:name=".View.Files.MainPDF"
             android:exported="true" />
+
         <activity
             android:name=".View.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

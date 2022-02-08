@@ -81,7 +81,6 @@ public class MainActivity_list_pdf extends AppCompatActivity {
                     @Override
                     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-
                         View view = super.getView(position, convertView, parent);
                         TextView textView = (TextView) view.findViewById(android.R.id.text1);
                         textView.setTextColor(Color.WHITE);
@@ -89,6 +88,7 @@ public class MainActivity_list_pdf extends AppCompatActivity {
                         textView.setBackgroundColor(Color.rgb(21, 102, 224));
                         return view;
                     }
+
                 };
                 ArrayAdapter<String> arrayAdapterr = new ArrayAdapter<String>(getApplicationContext(),
                         android.R.layout.simple_list_item_1,uploaduser){

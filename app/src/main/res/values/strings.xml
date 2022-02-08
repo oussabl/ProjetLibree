@@ -9,8 +9,8 @@
     <string name="singin">SING IN</string>
     <string name="forgotpassword">FORGOT PASSWORD</string>
     <string name="id">ID</string>
-    <string name="date_arrive">Date arrive</string>
-    <string name="date_depart">Date depart</string>
+    <string name="date_arrive">Date Fin</string>
+    <string name="date_depart">Date Debut</string>
     <string name="telephone">Telephone</string>
     <string name="delete">Delete</string>
     <string name="register">Register</string>
@@ -25,6 +25,7 @@
         <item> Laftif yousra </item>
         <item> Belarbi Ali </item>
         <item> Stitou Yahya </item>
+        <item> Malak Alaoui </item>
     </string-array>
     <string-array name="listadmin">
         <item> Belarbi Oussama </item>

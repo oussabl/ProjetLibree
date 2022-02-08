@@ -56,6 +56,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints">
+
                     <!-- INPUT -->
                     <EditText
                         android:id="@+id/username_input"
@@ -72,14 +73,14 @@
                         android:paddingBottom="15dp"
                         android:textCursorDrawable="@drawable/cursor_color"
                         android:textSize="12sp" />
-
                     <ImageView
                         android:id="@+id/username_icon"
                         android:layout_width="14.7dp"
                         android:layout_height="12.3dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="17dp"
-                        android:src="@drawable/email" />
+                        android:src="@drawable/email"
+                        />
 
                 </RelativeLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>

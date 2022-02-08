@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.projetlibre.Controlle.DAOEmloyee;
 import com.example.projetlibre.Controlle.DAOMessage;
 import com.example.projetlibre.Model.Employer;
+import com.example.projetlibre.Model.Message;
 import com.example.projetlibre.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -50,17 +51,17 @@ public class SendEmailC extends AppCompatActivity  {
         listSpinner = new ArrayList<>();
         list = new ArrayList<>();
 
-         Bundle bundle = new Bundle();
-         bundle = getIntent().getExtras();
-         key = bundle.getString("key");
-         nom = bundle.getString("firstname");
-         prenom = bundle.getString("lastname");
-         mission = bundle.getString("mission");
-      //  Toast.makeText(this, " missionnnnn  : "+mission, Toast.LENGTH_SHORT).show();
+        Bundle bundle = new Bundle();
+        bundle = getIntent().getExtras();
+        key = bundle.getString("key");
+        nom = bundle.getString("firstname");
+        prenom = bundle.getString("lastname");
+        mission = bundle.getString("mission");
+        //  Toast.makeText(this, " missionnnnn  : "+mission, Toast.LENGTH_SHORT).show();
 
-         title = findViewById(R.id.emailtitle);
-         body = findViewById(R.id.emailBoddy);
-         messageEnvoi = findViewById(R.id.btn_message_envoi);
+        title = findViewById(R.id.emailtitle);
+        body = findViewById(R.id.emailBoddy);
+        messageEnvoi = findViewById(R.id.btn_message_envoi);
 
         messageEnvoi.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,7 +88,9 @@ public class SendEmailC extends AppCompatActivity  {
                         @Override
                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                             userde = parent.getItemAtPosition(position).toString();
+                            userde = parent.getItemAtPosition(position).toString();
+
+                            Toast.makeText(SendEmailC.this, "--- "+userde, Toast.LENGTH_SHORT).show();
 
                         }
 
@@ -119,4 +122,3 @@ public class SendEmailC extends AppCompatActivity  {
         title.setText("");
     }
 }
-

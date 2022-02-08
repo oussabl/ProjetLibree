@@ -11,7 +11,7 @@
      android:layout_height="wrap_content"
      android:onClick="onClick"
 
-     android:id="@+id/cardView"
+     android:id="@+id/cardView1"
 
      android:layout_marginStart="16dp"
      android:layout_marginTop="16dp"
@@ -43,18 +43,18 @@
              <TextView
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
-                 android:text="First Name :"
+                 android:text="Envoye par : "
                  android:textColor="@color/black"
                  android:textSize="16sp"
                  android:textStyle="bold" />
 
              <TextView
-                 android:id="@+id/tvfirstName"
+                 android:id="@+id/firrstname"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_marginLeft="8dp"
                  android:text="Arya"
-                 android:textColor="@color/black"
+                 android:textColor="@color/teal_200"
                  android:textSize="20sp" />
 
          </LinearLayout>
@@ -71,18 +71,18 @@
              <TextView
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
-                 android:text="Last Name :"
+                 android:text="Titre:"
                  android:textColor="@color/black"
                  android:textSize="16sp"
                  android:textStyle="bold" />
 
              <TextView
-                 android:id="@+id/tvlastName"
+                 android:id="@+id/titlee"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_marginLeft="8dp"
                  android:text="Stark"
-                 android:textColor="@color/black"
+                 android:textColor="@color/teal_200"
                  android:textSize="20sp" />
 
          </LinearLayout>
@@ -93,24 +93,23 @@
              android:layout_gravity="center_vertical"
              android:paddingBottom="15dp"
              android:layout_margin="6dp"
-
              android:orientation="horizontal">
 
              <TextView
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
-                 android:text="Email :"
+                 android:text="Date d'envoi  :"
                  android:textColor="@color/black"
                  android:textSize="16sp"
                  android:textStyle="bold" />
 
              <TextView
-                 android:id="@+id/tvage"
+                 android:id="@+id/idtime"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_marginLeft="8dp"
-                 android:text="Email"
-                 android:textColor="@color/black"
+                 android:text="Time"
+                 android:textColor="@color/teal_200"
                  android:textSize="15sp" />
 
          </LinearLayout>

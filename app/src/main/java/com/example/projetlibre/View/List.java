@@ -57,7 +57,7 @@ public class List extends AppCompatActivity {
                     list.add(emp);
                     key= data.getKey();
                 }
-                myAdapter.notifyDataSetChanged();
+              //  myAdapter.notifyDataSetChanged();
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

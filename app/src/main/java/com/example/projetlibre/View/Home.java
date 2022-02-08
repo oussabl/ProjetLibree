@@ -16,18 +16,21 @@ import com.example.projetlibre.View.Files.MainActivity_list_pdf;
 import com.example.projetlibre.View.Messages.ListMessage;
 import com.example.projetlibre.View.Messages.SendEmail;
 import com.example.projetlibre.View.ListConge;
+import com.example.projetlibre.View.Messages.SendEmailC;
 
 public class Home extends AppCompatActivity {
 
-                    LinearLayout lchercher ,
-                            add_employer,
-                            onlistUsers,
-                            List_PDF,
-                            List_Conge,
-                            dialogCherche,
-                            List_Message,
-                            mailversclient;
+    LinearLayout lchercher ,
+            add_employer,
+            onlistUsers,
+            List_PDF,
+            List_Conge,
+            dialogCherche,
+            List_Message,
+            mailversclient;
     String KEY,nom,prenom,mission,email;
+    AlertDialog  alertDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +55,7 @@ public class Home extends AppCompatActivity {
         prenom = bundle.getString("lastname");
         mission = bundle.getString("mission");
         email = bundle.getString("email");
+
         Toast.makeText(this, "voila mission" +mission +" ****" +nom, Toast.LENGTH_SHORT).show();
 
 
@@ -169,9 +173,57 @@ public class Home extends AppCompatActivity {
 
     }
     public void List_Message(View view) {
-        Intent intent = new Intent(this, ListMessage.class);
-        startActivity(intent);
+       /* Intent intent = new Intent(this, ListMessage.class);
+        startActivity(intent);*/
        // Toast.makeText(this, "From ListMessage", Toast.LENGTH_SHORT).show();
+        Message(view);
+    }
+
+
+
+    public void Message(View view) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        View Selectedchoix = getLayoutInflater().inflate(R.layout.message, null);
+
+        LinearLayout list = Selectedchoix.findViewById(R.id.messagelist);
+        LinearLayout send = Selectedchoix.findViewById(R.id.messagesend);
+
+        list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, ListMessage.class);
+                intent.putExtra("key", KEY);
+                intent.putExtra("firstname", prenom);
+                intent.putExtra("lastname", nom);
+                intent.putExtra("mission", mission);
+                intent.putExtra("email",email);
+
+                startActivity(intent);
+            }
+        });
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_image = new Intent(getApplicationContext(), SendEmail.class);
+                intent_image.putExtra("key", KEY);
+                intent_image.putExtra("firstname", prenom);
+                intent_image.putExtra("lastname", nom);
+                intent_image.putExtra("mission", mission);
+                intent_image.putExtra("email",email);
+
+                startActivity(intent_image);            }
+        });
+        builder.setView(Selectedchoix);
+        alertDialog = builder.create();
+        alertDialog.show();
+
+      /*  Intent intent_PDF = new Intent(this, MainPDF.class);
+        intent_PDF.putExtra("key", KEY);
+        intent_PDF.putExtra("firstname", prenom);
+        intent_PDF.putExtra("lastname", nom);
+        //setResult(RESULT_OK, intent_PDF);
+        startActivity(intent_PDF);*/
     }
 
 }

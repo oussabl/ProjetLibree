@@ -83,14 +83,15 @@ EditText eddf,edfn,edlt,edms,eddp,edem,edtl,edpw;
     }
 
     public void SendMail(View view) {
-        Intent intent = new Intent(ProfileEmployer.this, SendEmailC.class);
+       /* Intent intent = new Intent(ProfileEmployer.this, SendEmailC.class);
         intent.putExtra("key", KEY);
         intent.putExtra("firstname", prenom);
         intent.putExtra("lastname", nom);
         intent.putExtra("mission", mission);
         intent.putExtra("email",email);
 
-        startActivity(intent);
+        startActivity(intent);*/
+        Message(view);
     }
 
     public void Reserve(View view) {
@@ -148,4 +149,52 @@ EditText eddf,edfn,edlt,edms,eddp,edem,edtl,edpw;
         //setResult(RESULT_OK, intent_PDF);
         startActivity(intent_PDF);*/
     }
+
+
+    public void Message(View view) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        View Selectedchoix = getLayoutInflater().inflate(R.layout.message, null);
+
+        LinearLayout list = Selectedchoix.findViewById(R.id.messagelist);
+        LinearLayout send = Selectedchoix.findViewById(R.id.messagesend);
+
+        list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileEmployer.this, ListMessage.class);
+                intent.putExtra("key", KEY);
+                intent.putExtra("firstname", prenom);
+                intent.putExtra("lastname", nom);
+                intent.putExtra("mission", mission);
+                intent.putExtra("email",email);
+
+                startActivity(intent);
+            }
+        });
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_image = new Intent(getApplicationContext(), SendEmailC.class);
+                intent_image.putExtra("key", KEY);
+                intent_image.putExtra("firstname", prenom);
+                intent_image.putExtra("lastname", nom);
+                intent_image.putExtra("mission", mission);
+                intent_image.putExtra("email",email);
+
+                startActivity(intent_image);            }
+        });
+        builder.setView(Selectedchoix);
+        alertDialog = builder.create();
+        alertDialog.show();
+
+      /*  Intent intent_PDF = new Intent(this, MainPDF.class);
+        intent_PDF.putExtra("key", KEY);
+        intent_PDF.putExtra("firstname", prenom);
+        intent_PDF.putExtra("lastname", nom);
+        //setResult(RESULT_OK, intent_PDF);
+        startActivity(intent_PDF);*/
+    }
+
+
 }

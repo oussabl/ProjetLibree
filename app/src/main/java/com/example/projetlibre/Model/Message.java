@@ -1,59 +1,37 @@
 package com.example.projetlibre.Model;
 
 public class Message {
-    private String nom;
-    private String prenom;
-    private String email;
-    private String key;
-    private String date_envoi;
-    private String description;
+    private String  userSource;
+    private String  userDestination;
+    private String  description;
+    private String  title;
+    private String  datEnvoi;
 
-    public Message(String nom, String prenom, String email, String key, String envoi) {
-        this.nom = nom;
-        this.prenom = prenom;
-        this.email = email;
-        this.key = key;
-        date_envoi = envoi;
+    public Message() {
     }
 
-    public String getNom() {
-        return nom;
+    public Message(String userSource, String userDestination, String description, String title, String datEnvoi) {
+        this.userSource = userSource;
+        this.userDestination = userDestination;
+        this.description = description;
+        this.title = title;
+        this.datEnvoi = datEnvoi;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public String getUserSource() {
+        return userSource;
     }
 
-    public String getPrenom() {
-        return prenom;
+    public void setUserSource(String userSource) {
+        this.userSource = userSource;
     }
 
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
+    public String getUserDestination() {
+        return userDestination;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getKey() {
-        return key;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
-    }
-
-    public String getEnvoi() {
-        return date_envoi;
-    }
-
-    public void setEnvoi(String date_envoi) {
-        this.date_envoi = date_envoi;
+    public void setUserDestination(String userDestination) {
+        this.userDestination = userDestination;
     }
 
     public String getDescription() {
@@ -62,5 +40,21 @@ public class Message {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDatEnvoi() {
+        return datEnvoi;
+    }
+
+    public void setDatEnvoi(String datEnvoi) {
+        this.datEnvoi = datEnvoi;
     }
 }

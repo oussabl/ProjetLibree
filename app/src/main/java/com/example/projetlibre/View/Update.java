@@ -207,7 +207,7 @@ public class Update extends AppCompatActivity {
     }
     public void OnDelete(View view) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setMessage("Are you sure,You wanted to delete this user");
+        alertDialogBuilder.setMessage("Are you sure,You want to delete this user");
                 alertDialogBuilder.setPositiveButton("yes",
                         new DialogInterface.OnClickListener() {
                             @Override

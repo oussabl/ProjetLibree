@@ -25,11 +25,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     Context context;
 
     ArrayList<Employer> list;
-    int positionn ;
     public MyAdapter(Context context, ArrayList<Employer> list) {
         this.context = context;
         this.list = list;
-
     }
 
     @NonNull
@@ -41,19 +39,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
         Employer emp = list.get(position);
         holder.firstName.setText(emp.getFirstname());
         holder.lastName.setText(emp.getLastname());
         holder.email.setText(emp.getEmail());
-        int pos=   holder.getAdapterPosition();
+        int pos = holder.getAdapterPosition();
         holder.parentlayout
                 .setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v("Possitionid",String.valueOf(pos));
                 getPosition(emp,pos);
-
             }
         });
     }
@@ -73,7 +68,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             email = itemView.findViewById(R.id.tvage);
             parentlayout  = itemView.findViewById(R.id.cardView);
         }
-
     }
 
     private void getPosition(Employer emp, int po ){

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Reserve_Conge">
+    tools:context=".View.Reserve_Conge">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -101,7 +101,7 @@
                                 android:paddingLeft="17dp"
                                 android:paddingTop="11dp"
                                 android:paddingBottom="11dp"
-                                android:text="Date Depart"
+                                android:text="Date debut"
                                 android:textSize="24sp" />
 
                         </LinearLayout>
@@ -149,7 +149,7 @@
                             android:background="@drawable/blue_fill__rounded_color"
                             android:fontFamily="@font/poppins_regular"
                             android:onClick="Validation"
-                            android:text="Button"
+                            android:text="Valider"
 
                             app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
 
@@ -165,9 +165,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="24sp"
-                android:text="Reserve"
+                android:text="Demande un conge"
+                android:padding="30sp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@color/purple_200"
+                android:textColor="@color/teal_200"
                 android:textSize="20sp"
                 android:textStyle="normal|bold"
                 app:drawableTint="#12C9E1"
@@ -192,7 +193,7 @@
                 android:id="@+id/checkConge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CheckConge"
+                android:text="Verifier"
                 android:onClick="onCheck"
                 app:layout_constraintBottom_toBottomOf="@+id/linearLayout8"
                 app:layout_constraintTop_toBottomOf="@+id/TextConge" />

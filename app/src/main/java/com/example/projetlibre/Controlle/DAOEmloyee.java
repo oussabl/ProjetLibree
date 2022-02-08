@@ -14,7 +14,6 @@ public class DAOEmloyee {
 
     public DAOEmloyee(){
         FirebaseDatabase db = FirebaseDatabase.getInstance();
-
         databaseReference= db.getReference(Employer.class.getSimpleName());
     }
 
@@ -30,7 +29,9 @@ public class DAOEmloyee {
     }
     public Query get(){
         return databaseReference.orderByKey();
-    }public Query getuser(){
+    }
+
+    public Query getuser(){
         return databaseReference.child("");
     }
 

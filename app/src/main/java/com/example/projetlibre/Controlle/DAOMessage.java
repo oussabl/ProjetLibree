@@ -1,7 +1,6 @@
 package com.example.projetlibre.Controlle;
 
-import com.example.projetlibre.Model.Conge;
-import com.example.projetlibre.View.Messages.Message;
+import com.example.projetlibre.Model.Message;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -11,6 +10,8 @@ import java.util.HashMap;
 
 public class DAOMessage {
     private DatabaseReference databaseReference;
+
+
     public DAOMessage(){
         FirebaseDatabase db = FirebaseDatabase.getInstance();
         databaseReference= db.getReference(Message.class.getSimpleName());

@@ -1,7 +1,6 @@
 package com.example.projetlibre.View.Messages;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -16,11 +15,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.projetlibre.Controlle.DAOEmloyee;
 import com.example.projetlibre.Controlle.DAOMessage;
-import com.example.projetlibre.Model.Conge;
 import com.example.projetlibre.Model.Employer;
+import com.example.projetlibre.Model.Message;
 import com.example.projetlibre.R;
-import com.example.projetlibre.View.Home;
-import com.example.projetlibre.View.ProfileEmployer;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
